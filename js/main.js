@@ -1,4 +1,4 @@
-//let city = document.getElementById('displayResults')
+
 
 function weather(city){
     fetch ('https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=7ed6f6627d7c40973c307b393360c74e')
