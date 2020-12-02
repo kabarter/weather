@@ -22,6 +22,7 @@ html, body {
 body {
   padding: 15px;
   background-image: url("/images/pixaby_Yellowstone.jpg");
+  text-align: center;
 }
 
 section {
