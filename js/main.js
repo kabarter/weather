@@ -24,7 +24,7 @@ function weatherData(data){
 }
 
 const search = document.querySelector('.searchCity');
-search.addEventListener('keypress', setQuery);
+search.addEventListener('onClick', setQuery);
 
 function setQuery(event){
     if (event.keyCode == 13){
