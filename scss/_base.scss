@@ -1,0 +1,55 @@
+$default-font-color: #000;
+$background-image: url('/images/pixaby_Yellowstone.jpg');
+$container-bgcolor: rgba(250, 240, 240, 0.699);
+$container-bordercolor: #31708E;
+$textbox-bordercolor: rgb(131, 117, 117);
+$button-hovercolor: #fff;
+$button-textcolor: #000;
+$add-button-color: #687864;
+$clear-button-color: #F7F9FB;
+
+
+@mixin mp($size) {
+    @media only screen and (min-width: $size){
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mp(786px) {
+        font-size: 22px;
+
+    }
+}
+
+body{
+    padding: 15px;
+    background-image: $background-image;
+}
+
+section{
+    background-color: $container-bgcolor;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid $container-bordercolor;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+}
+
