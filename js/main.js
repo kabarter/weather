@@ -1,7 +1,3 @@
-
- 
-
-
 function weather(city){
     fetch ('https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=7ed6f6627d7c40973c307b393360c74e')
     .then(function(resp) {return resp.json()})
@@ -34,10 +30,11 @@ function weatherData(data){
     document.getElementById('lowTemp').innerHTML = lowMin + '&deg F is the Low';
     document.getElementById('date').innerHTML = dateObj;
     
-
+    document.getElementById('icon').innerHTML= data.weather[0].icon;
+    let icon = "http://openweathermap.org/img/wn/${iconCode}@2x.png";
+    //$('#wicon').attr('src', iconUrl);
 }
+//function iconData(iconCode){
+  
+//}
 
-let iconCode = data.weather[0].icon[0];
-let iconUrl = "http://openweathermap.org/img/w/${iconCode}.png";
-$('#icon').attr('src', iconUrl);
-document.getElementById('wicon').innerHTML=  iconCode;
