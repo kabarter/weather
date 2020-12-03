@@ -37,7 +37,7 @@ function weatherData(data){
 
 }
 
-let iconCode = data.weather[0].icon;
-let iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-$('#wicon').attr('src', iconUrl);
+let iconCode = data.weather[0].icon[0];
+let iconUrl = "http://openweathermap.org/img/w/${iconCode}.png";
+$('#icon').attr('src', iconUrl);
 document.getElementById('wicon').innerHTML=  iconCode;
