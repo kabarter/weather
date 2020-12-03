@@ -1,3 +1,6 @@
+let button = document.querySelector('.searchCity')
+let inputValue = document.querySelector('.inputValue')
+ 
 
 
 function weather(city){
@@ -7,15 +10,12 @@ function weather(city){
         weatherData(data);
     })
    // .catch(function(){
-    
+        //alert: "Please enter a new city"
     //});
 }
 window.onload = function(){
     weather(city);
 }
-
-
-
 
 
 function weatherData(data){
@@ -36,5 +36,4 @@ function weatherData(data){
     //document.getElementById('icon').innerHTML=  icon;
 
 }
-
 

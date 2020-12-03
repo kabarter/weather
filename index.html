@@ -13,32 +13,31 @@
 
     <main>
         <section class ="searchBanner">
-            <form>
-                <h2><label for="locationSearch">Search for your location:</label></h2>
+            <h2><label for="locationSearch">Search for your location:</label></h2>
                 <input 
                     id="searchCity" 
                     type="text" 
                     size ="30" 
-                    placeholder="Enter City" 
+                    placeholder="Enter a City" 
+                    autocomplete="off"
                     tabindex="0"/>
                 <button 
-                    id ="submitButton" 
                     class="button" 
                     title="location" 
                     aria-label="Add Location" 
                     tabindex="0" 
                     type="submit">Submit</button>
-            </form>
         </section>
 
         <section class="temperatureContainer">
             <h3>Current Weather</h3>
-            <div id="date"></div>
+           
             <div id="city"></div>
             <div id="returnedLocation"></div>
             <div id="icon"></div>
-            <div id="description"></div> 
             <div id="returnedTemp"></div> 
+            <div id="description"></div> 
+            <div id="date"></div>
         </section>
 
         <section class="detailsContainer">
