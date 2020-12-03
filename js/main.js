@@ -1,5 +1,4 @@
-let button = document.querySelector('.searchCity')
-let inputValue = document.querySelector('.inputValue')
+
  
 
 
@@ -14,7 +13,7 @@ function weather(city){
     //});
 }
 window.onload = function(){
-    weather(city);
+  weather(city);
 }
 
 
@@ -24,16 +23,21 @@ function weatherData(data){
     let lowMin = Math.round(((parseFloat(data.main.temp_min)-273.15)*1.8)+32);
     const dateObj = new Date();
     
-
     //let icon = 'http://openweathermap.org/img/wn/${data.weather[0].icon}.png';
    
+  
+
     document.getElementById('description').innerHTML = data.weather[0].description;
     document.getElementById('returnedLocation').innerHTML = data.name;
     document.getElementById('returnedTemp').innerHTML = fahrenheit + '&deg F currently';
     document.getElementById('highTemp').innerHTML = highMax + '&deg F is the High';
     document.getElementById('lowTemp').innerHTML = lowMin + '&deg F is the Low';
     document.getElementById('date').innerHTML = dateObj;
-    //document.getElementById('icon').innerHTML=  icon;
+    
 
 }
 
+let iconCode = data.weather[0].icon;
+let iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+$('#wicon').attr('src', iconUrl);
+document.getElementById('wicon').innerHTML=  iconCode;
