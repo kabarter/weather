@@ -6,9 +6,9 @@ function weather(city){
    .then(function(data){
      weatherData(data);
    })
-    .catch(function(){
-        alert: "Please enter a new city"
-    });
+    //.catch(function(){
+       // alert: "Please enter a new city"
+    //});
 }
 
 function weatherData(data){
@@ -29,40 +29,9 @@ function weatherData(data){
     //let iconCode = document.getElementById('icon').innerHTML= data.weather[0].icon;
    // icon.src="https://openweathermap.org/img/w" + iconCode +".png";
 //}
-  
+}
 window.onload = function(){
     weather(data);
 }
-}
-    
-   // let defaultCity = document.getElementById("defaultCity");
-  //  defaultCity.addEventListener("click", function(){
-  //      let savedLocation = document.getElementById('cityName').value;
-  //      if (savedLocation != "");{
-  //          localStorage.setItem('cityDflt', savedLocation);
-  //          let message = document.getElementById('mesage');
-  //          message.innerText = "Thank you. Your preferred location has been saved.";
-  //      }
-  //  })
 
-
-/*const getWeather = async (city) =>{
-    let citySearch = document.getElementById('cityName')
-    cityName.innerText = '';
-    const dataFetch = await fetch('https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=7ed6f6627d7c40973c307b393360c74e');
-    const data = await dataFetch.json(); {
-        if (data.cod != "200") {
-            let message = document.getElementById('message')
-            message.innerHTML = "Please enter a different city name.";
-        } else {
-            document.getElementById('message')
-            message.innerHTML = "";
-            weather(city);
-            weatherData(data);
-            return data;
-        }
-    }
-}
-
-}*/
-
+  
