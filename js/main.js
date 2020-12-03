@@ -1,13 +1,13 @@
 
 
 function weather(city){
-   fetch ('https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=7ed6f6627d7c40973c307b393360c74e')
+   fetch ('https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=7ed6f6627d7c40973c307b393360c74e')
     .then(function(resp) {return resp.json()})
    .then(function(data){
      weatherData(data);
    })
     .catch(function(){
-        //alert: "Please enter a new city"
+        alert: "Please enter a new city"
     });
 }
 
@@ -30,8 +30,23 @@ function weatherData(data){
    // icon.src="https://openweathermap.org/img/w" + iconCode +".png";
 //}
   
+window.onload = function(){
+    weather(data);
+}
+}
+    
+   // let defaultCity = document.getElementById("defaultCity");
+  //  defaultCity.addEventListener("click", function(){
+  //      let savedLocation = document.getElementById('cityName').value;
+  //      if (savedLocation != "");{
+  //          localStorage.setItem('cityDflt', savedLocation);
+  //          let message = document.getElementById('mesage');
+  //          message.innerText = "Thank you. Your preferred location has been saved.";
+  //      }
+  //  })
 
-const getWeather = async (city) =>{
+
+/*const getWeather = async (city) =>{
     let citySearch = document.getElementById('cityName')
     cityName.innerText = '';
     const dataFetch = await fetch('https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=7ed6f6627d7c40973c307b393360c74e');
@@ -49,16 +64,5 @@ const getWeather = async (city) =>{
     }
 }
 
-window.onload = function(){
-    let defaultCity = document.getElementById("defaultCity");
-    defaultCity.addEventListener("click", function(){
-        let savedLocation = document.getElementById('cityName').value;
-        if (savedLocation != "");{
-            localStorage.setItem('cityDflt', savedLocation);
-            let message = document.getElementById('mesage');
-            message.innerText = "Thank you. Your preferred location has been saved.";
-        }
-    })
+}*/
 
-}
-}
